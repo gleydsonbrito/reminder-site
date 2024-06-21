@@ -8,6 +8,7 @@ function checkUncheck(flag){
 
 function createListItem(values){
   const {
+    id,
     orgao, 
     banca, 
     dt_inscricao,
@@ -49,7 +50,7 @@ function createListItem(values){
               <img class="checks-icons" src="./assets/${checkUncheck(f_pago)}.png" alt="">
             </div>
           </div>
-          <p class="dt-prova">Prova: ${dt_prova}</p>
+          <p class="dt-prova">Dia da prova: ${dt_prova}</p>
         </li>
   `
 }
