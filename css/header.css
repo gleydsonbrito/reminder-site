@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-main);
+  padding: 20px 0;
+}
+
+.header > h3 {
+  font-family: "Playwrite NG Modern", cursive;
+  font-weight: bolder;
+  color: #FFF;
+}
+
+.h-title {
+  margin-bottom: 20px;
+  font-family: "Playwrite NG Modern", cursive;
+  font-weight: bolder;
+  color: #FFF;
+} 
+
+.icon {
+  width: 70px;
+  height: auto;
+  margin-bottom: 30px;
+}
+

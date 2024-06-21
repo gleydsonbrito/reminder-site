@@ -1,0 +1,96 @@
+.lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista > p {
+  align-self: center;
+  margin: 10px 0;
+  color: #FFF;
+}
+
+.l-item {
+  background-color: #FFF;
+  width: 22rem;
+  border-radius: 20px;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  color: var(--dark-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-container {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  margin-left: 20px;
+}
+
+.rigth {
+  margin-right: 20px;
+}
+
+li > p {
+  margin-top: 5px;
+}
+
+.concurso {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #7289da;
+  margin-bottom: 5px;
+}
+
+.dt-container {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.dt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dt > p {
+  margin-top: 5px;
+}
+
+.check-container {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.checks {
+  display: flex;
+  align-items: center;
+}
+
+.checks-icons {
+  margin: 5px;
+  width: 20px;
+  height: auto;
+}
+
+.valor {
+  font-weight: bold;
+  color: var(--dark-main);
+  font-size: 1.2rem;
+}
+
+.dt-prova {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
