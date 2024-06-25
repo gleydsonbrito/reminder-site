@@ -25,14 +25,17 @@
   </header>
   <main class="main">
     <div class="lista">
-      <p>Provas Cadastradas</p>
-      <ul class="exames-list">
-        
-      </ul>
+      <select name="candidato" class="candidatos">
+        <option value="0">Selecione um candidato</option>
+        <option value="gleydson">Gleydson</option>
+        <option value="elane">Elane</option>
+      </select>
+      <ul class="exames-list"></ul>
     </div>
   </main>
   <img class="btn-adicionar" src="./assets/adicionar.png" alt="botao para adiconar provas">
   <script src="./scripts/loadItems.js"></script>
   <script src="./scripts/floatButton.js"></script>
+  <script src="./scripts/selectCandidatos.js"></script>
 </body>
 </html>
