@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/list.css">
   <link rel="stylesheet" href="./css/btns.css">
+  <link rel="stylesheet" href="./css/modal.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,13 +30,51 @@
         <option value="0">Selecione um candidato</option>
         <option value="gleydson">Gleydson</option>
         <option value="elane">Elane</option>
+        <option value="joão">João</option>
       </select>
       <ul class="exames-list"></ul>
     </div>
   </main>
+  <div class="modal-container">
+    <div class="modal-content">
+      <p class="modal-title">CADASTRAR NOVO CONCURSO</p>
+      <form class="modal-form" action="https://reminder-zrt9.onrender.com/adicionarProva" method="post">
+        <input type="text" name="orgao" placeholder="Órgão" >
+        <input type="text" name="banca" placeholder="Banca Organizadora" >
+        <label for="">Data de inscrição</label>
+        <input type="date" name="dt_inscricao" >
+        
+        <label for="">Data do Pagamento</label>
+        <input type="date" name="dt_pgto" >
+        
+        <label for="">Data da Prova</label>
+        <input type="date" name="dt_prova" >
+  
+        <div class="checks-container">
+          <div>
+            <label for="">Já está inscrito?</label>
+            <input type="checkbox" name="f_inscrito" id="pgto">
+          </div>
+          <div>
+            <label for="">O concurso já foi pago?</label>
+            <input type="checkbox" name="f_inscrito" id="inscrito">
+          </div>
+        </div>
+        <input type="number" name="valor" placeholder="Valor do concurso">
+        <select name="candidato" class="candidatos">
+          <option value="0">Selecione um candidato</option>
+          <option value="Gleydson">Gleydson</option>
+          <option value="Elane">Elane</option>
+          <option value="João">João</option>
+        </select>
+        <input type="submit" value="Cadastrar Concurso">
+      </form>
+    </div>
+  </div>
   <img class="btn-adicionar" src="./assets/adicionar.png" alt="botao para adiconar provas">
   <script src="./scripts/loadItems.js"></script>
-  <script src="./scripts/floatButton.js"></script>
+  <script src="./scripts/adicionar.js"></script>
   <script src="./scripts/selectCandidatos.js"></script>
+  <script src="./scripts/modal.js"></script>
 </body>
 </html>
