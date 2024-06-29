@@ -65,7 +65,6 @@ fetch(BASE_URL, {
 .then(res => res.json())
 .then(exames => {
   exames.forEach( item => {
-    console.log(createListItem(item))
     const li = document.createElement('li')
     li.innerHTML = createListItem(item)
     ul.appendChild(li)
