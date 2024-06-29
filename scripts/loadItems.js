@@ -60,8 +60,7 @@ fetch(BASE_URL, {
   headers: {
     'Content-Type': 'application/json'
   },
-}
-)
+})
 .then(res => res.json())
 .then(exames => {
   exames.forEach( item => {
