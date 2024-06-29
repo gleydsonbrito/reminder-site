@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector('.modal-form');
 
   form.addEventListener('submit', function(event) {
@@ -46,7 +47,12 @@
     };
 
     fetch(url, options)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
         alert('Dados enviados com sucesso:', data);
       })
@@ -54,3 +60,4 @@
         console.error('Erro ao enviar dados:', error);
       });
   });
+});
