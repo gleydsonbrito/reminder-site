@@ -39,16 +39,16 @@
     <div class="modal-content">
       <p class="modal-title">CADASTRAR NOVO CONCURSO</p>
       <form class="modal-form" action="https://reminder-zrt9.onrender.com/adicionarProva" method="post">
-        <input type="text" name="orgao" placeholder="Órgão" >
-        <input type="text" name="banca" placeholder="Banca Organizadora" >
+        <input type="text" name="orgao" placeholder="Órgão" required>
+        <input type="text" name="banca" placeholder="Banca Organizadora" required>
         <label for="">Data de inscrição</label>
-        <input type="date" name="dt_inscricao" >
+        <input type="date" name="dt_inscricao" required>
         
         <label for="">Data do Pagamento</label>
-        <input type="date" name="dt_pgto" >
+        <input type="date" name="dt_pgto" required>
         
         <label for="">Data da Prova</label>
-        <input type="date" name="dt_prova" >
+        <input type="date" name="dt_prova" required>
   
         <div class="checks-container">
           <div>
@@ -60,8 +60,8 @@
             <input type="checkbox" name="f_inscrito" id="inscrito">
           </div>
         </div>
-        <input type="number" name="valor" placeholder="Valor do concurso">
-        <select name="candidato" class="candidatos">
+        <input type="number" name="valor" placeholder="Valor do concurso" required>
+        <select name="candidato" class="candidatos" required>
           <option value="0">Selecione um candidato</option>
           <option value="Gleydson">Gleydson</option>
           <option value="Elane">Elane</option>

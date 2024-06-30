@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = 'https://reminder-zrt9.onrender.com/adicionarProva';
     const options = {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify(body)
     };
 
