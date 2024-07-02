@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return dateString;
     }
 
-    const body = {
+    const prova = {
       orgao: orgao,
       banca: banca,
       dt_inscricao: formatDate(dt_inscricao),
@@ -35,23 +35,27 @@ document.addEventListener('DOMContentLoaded', function() {
       candidato: candidato,
     };
 
-    console.log('Body da Requisição:', body);
+    console.log('Body da Requisição:', prova);
 
     const url = 'https://reminder-zrt9.onrender.com/adicionarProva';
     const options = {
       method: 'POST',
-      body: JSON.stringify(body)
+      headers: { 
+        'Content-Type': 'application/json' ,
+        'Cache-Control': 'no-cache',
+        'Accept': '*/*',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive'
+      },
+      body: JSON.stringify(prova)
     };
 
     fetch(url, options)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
         alert('Dados enviados com sucesso:', data);
+        form.reset()
+        location.reload()
       })
       .catch(error => {
         console.error('Erro ao enviar dados:', error);

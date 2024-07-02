@@ -55,17 +55,23 @@ function createListItem(values){
   `
 }
 
-fetch(BASE_URL, {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-})
-.then(res => res.json())
-.then(exames => {
-  exames.forEach( item => {
-    const li = document.createElement('li')
-    li.innerHTML = createListItem(item)
-    ul.appendChild(li)
-  });
+function updateList() {
+  fetch(BASE_URL, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+  .then(res => res.json())
+  .then(exames => {
+    exames.forEach( item => {
+      const li = document.createElement('li')
+      li.innerHTML = createListItem(item)
+      ul.appendChild(li)
+    });
+  })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateList()
 })
